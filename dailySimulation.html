@@ -11,9 +11,44 @@
 
   <script>
     const output = document.getElementById("output");
-    
-    # ADD CODE HERE
+    function logEvent(text) {
+      output.innerHTML += "<p>" + text + "</p>";
+    }
 
+    const moods = ["😊", "😴", "🤔", "🎉", "😌"];
+
+    setTimeout(() => {
+      logEvent("10:00 AM - Waking up, still half asleep");
+    }, 1000);
+
+    setTimeout(() => {
+      logEvent("10:15 AM - Getting ready, Breakfast in hand");
+    }, 3000);
+
+    setTimeout(() => {
+      logEvent("10:45 AM - Heading to work");
+    }, 5000);
+
+    setTimeout(() => {
+      logEvent("3:00 PM - Lunch break, finally");
+    }, 7000);
+
+    setTimeout(() => {
+      logEvent("4:00 PM - Head back home");
+    }, 9000);
+
+    setTimeout(() => {
+      logEvent("6:00 PM - Quick workout");
+    }, 11000);
+
+    setTimeout(() => {
+      const randomMood = moods[Math.floor(Math.random() * moods.length)];
+      logEvent("9:00 PM - Relaxing, mood right now: " + randomMood);
+    }, 13000);
+
+    setTimeout(() => {
+      logEvent("12:00 AM - Lights out, day complete ✅");
+    }, 15000);
   </script>
 
 </body>
